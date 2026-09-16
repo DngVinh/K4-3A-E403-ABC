@@ -72,6 +72,15 @@ Trạng thái: CP1 đã khôi phục nội dung lõi; còn bổ sung willing use
 - [ ] Chuẩn bị ảnh chụp hoặc video ngắn làm bằng chứng cho buổi demo/bàn giao.
 - [ ] Chốt sign-off nội bộ sau khi các mục kiểm tra trên đạt.
 
+### Kiểm tra kỹ thuật đã thực hiện
+
+Ngày kiểm tra: 2026-09-16
+
+- `node --check codebase/app.js`: **Đạt**.
+- Các file được liên kết từ tài liệu và prototype: **Đều tồn tại**.
+- `git diff --check`: **Đạt**.
+- Kiểm tra trình duyệt trực tiếp: **Chưa thực hiện được trong môi trường agent vì không có browser khả dụng**; cần người trong nhóm chạy click test và ghi bằng chứng.
+
 **Để phase sau, không phải blocker của CP2:** tích hợp AI thật và citation đã xác minh ở CP3; user test với học viên thật và đo khả năng tự sửa/giải thích lại ở CP5.
 
 **Giới hạn:** số liệu hiện tại phản ánh hành vi tutor, chưa chứng minh chắc chắn rằng mọi học viên muốn tính năng này; cần kiểm chứng với học viên thật và đo họ có sửa/giải thích đúng hay không.

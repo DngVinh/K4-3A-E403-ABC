@@ -20,6 +20,22 @@ let answer = fixture.wrongAnswer;
 let correction = fixture.correctedAnswer;
 let explanation = fixture.explainBack;
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function resetExercise() {
+  answer = fixture.wrongAnswer;
+  correction = fixture.correctedAnswer;
+  explanation = fixture.explainBack;
+}
+
 function setProgress(step) {
   currentStep = step;
   const percentage = step === 0 ? 0 : Math.min(100, (step / 4) * 100);
@@ -36,7 +52,10 @@ function render(html, step) {
 }
 
 function handleAction(action) {
-  if (action === "start") renderAttempt();
+  if (action === "start") {
+    resetExercise();
+    renderAttempt();
+  }
   if (action === "diagnose") {
     answer = document.querySelector("#attempt-answer")?.value.trim() || fixture.wrongAnswer;
     renderDiagnosis();
@@ -74,7 +93,7 @@ function renderAttempt() {
     <p class="lead">Hãy viết cách bạn đang hiểu. Không cần tra tài liệu trước.</p>
     <div class="prompt-card"><strong>${fixture.question}</strong></div>
     <label class="label" for="attempt-answer">Câu trả lời của bạn</label>
-    <textarea id="attempt-answer">${answer}</textarea>
+    <textarea id="attempt-answer">${escapeHtml(answer)}</textarea>
     <div class="actions"><button class="primary-button" type="button" data-action="diagnose">Nộp để xem chẩn đoán</button></div>
   `, 0);
 }
@@ -97,7 +116,7 @@ function renderCorrection() {
     <div class="alert success"><span class="alert-icon">↗</span><div>${fixture.hint}</div></div>
     <div class="citation-card"><span class="citation-label">Căn cứ</span><p>${fixture.citation}</p></div>
     <label class="label" for="correction-answer">Hãy viết lại câu trả lời</label>
-    <textarea id="correction-answer">${correction}</textarea>
+    <textarea id="correction-answer">${escapeHtml(correction)}</textarea>
     <div class="actions"><button class="primary-button" type="button" data-action="explain">Gửi câu trả lời đã sửa</button></div>
   `, 2);
 }
@@ -107,9 +126,9 @@ function renderExplainBack() {
     <p class="kicker">Bước 4 · Self-correct</p>
     <h2>Giải thích lại bằng lời của bạn</h2>
     <p class="lead">Nếu có thể giải thích vì sao mình sai, bạn đang kiểm tra được mức hiểu — không chỉ đổi đáp án.</p>
-    <div class="summary-card"><strong>Câu trả lời đã sửa</strong><p>${correction}</p></div>
+    <div class="summary-card"><strong>Câu trả lời đã sửa</strong><p>${escapeHtml(correction)}</p></div>
     <label class="label" for="explain-answer">Vì sao câu trả lời ban đầu chưa đúng?</label>
-    <textarea id="explain-answer">${explanation}</textarea>
+    <textarea id="explain-answer">${escapeHtml(explanation)}</textarea>
     <div class="actions"><button class="primary-button" type="button" data-action="complete">Hoàn tất explain-back</button></div>
   `, 3);
 }
@@ -121,16 +140,14 @@ function renderComplete() {
     <div class="alert success"><span class="alert-icon">✓</span><div><strong>Đã tự sửa và giải thích lại.</strong><br />Lần tiếp theo hệ thống có thể lưu lại misconception này để hỗ trợ phù hợp hơn.</div></div>
     <div class="two-column">
       <div class="summary-card"><strong>Giả định ban đầu</strong><p>${fixture.wrongAnswer}</p></div>
-      <div class="summary-card"><strong>Điều đã hiểu lại</strong><p>${explanation}</p></div>
+      <div class="summary-card"><strong>Điều đã hiểu lại</strong><p>${escapeHtml(explanation)}</p></div>
     </div>
     <div class="actions"><button class="secondary-button" type="button" data-action="review">Xem lại chẩn đoán</button><button class="primary-button" type="button" data-action="start">Làm bài khác</button></div>
   `, 4);
 }
 
 resetButton.addEventListener("click", () => {
-  answer = fixture.wrongAnswer;
-  correction = fixture.correctedAnswer;
-  explanation = fixture.explainBack;
+  resetExercise();
   renderStart();
 });
 
