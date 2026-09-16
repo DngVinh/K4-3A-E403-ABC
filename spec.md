@@ -1,53 +1,55 @@
-# AI SPEC — Discord StuckRadar
+# AI SPEC — VLearn FixFirst
 
 Nhóm: K4-3A-E403-ABC · Phòng E403<br>
-Track: B — Discord Assistant · Slice: B2<br>
-Trạng thái: CP1 draft sau vòng mining dữ liệu
+Track: D — Học tập thích ứng & tương tác trên VLearn · Slice: D2<br>
+Trạng thái: CP1 draft sau vòng mining VLearn
 
 ## §1 — Canvas 4 ô
 
-### 1. Thông tin chung
+### 01 · Người dùng & nỗi đau
 
-- **Hướng đi:** Track B2 — phát hiện các câu hỏi/vấn đề có nguy cơ bị bỏ sót trên Discord.
-- **Job executor:** TA/Mod khi kết thúc ngày học.
-- **Quy trình hiện tại:** TA/Mod phải đọc nhiều kênh, dựa vào thread/reply và các daily report để tự tìm câu hỏi chưa rõ trạng thái; các câu hỏi cùng một chủ đề có thể xuất hiện dưới nhiều cách diễn đạt.
-- **Mục tiêu của slice:** tạo một danh sách triage có nhóm chủ đề, mức độ ưu tiên, liên kết message và trạng thái để TA/Mod duyệt trước khi xử lý.
-- **Phân công:** Hiếu — mining/evidence; Nguyên — UX/prototype; Vũ — technical spec/validation; Vinh — điều phối/product owner.
+**Học viên muốn biết mình sai ở đâu, không chỉ biết đáp án đúng.**
 
-### 2. Nỗi đau cốt lõi
+- **Job:** Học viên làm bài tập trước khi xem lý thuyết để tự kiểm tra mức hiểu.
+- **Pain:** Khi làm sai, học viên thường nhận đáp án hoặc lời giải dài nhưng không biết giả định nào của mình sai, nên dễ lặp lại lỗi.
 
-TA/Mod khó nhận ra và ưu tiên các câu hỏi học viên đang bị bỏ sót giữa nhiều kênh Discord, đặc biệt khi nhiều người lặp lại cùng một câu hỏi về cách nộp bài, daily standup, XP hoặc lỗi thao tác.
+### 02 · Bằng chứng ban đầu
 
-**Bằng chứng mining ban đầu** (chi tiết và phương pháp ở [notes/discord-mining.md](notes/discord-mining.md)):
+**Tutor chưa thường xuyên kiểm tra mức hiểu.**
 
-- Pack có 1.092 message trong 3 ngày (779 human, 313 bot); `reply_to` không phản ánh đầy đủ các câu trả lời tự phát nên chưa dùng nó để kết luận “unanswered sau 4 giờ”.
-- Trong cụm 26 message gốc có cả từ khóa `daily` và `standup` trong 2 giờ ngày 14/09/2026: 13 author ẩn danh, 23 message mention bot. Phân loại một-intent cho thấy 12 câu hỏi về phạm vi/cách nộp, 7 câu hỏi về nơi/cách gọi lệnh, 2 về deadline, 2 về mẫu/ví dụ, 2 về thời điểm/XP và 1 về lỗi trạng thái của một thành viên.
-- Toàn pack có 59 message human nhắc `daily standup`, từ 30 author (57 là message gốc). Đây là số lần nhắc từ khóa, không phải số câu hỏi đã xác nhận duy nhất.
-- Bốn daily report hiện có 14 đoạn lỗi chuỗi `nguồn tham chiếu`, 1 đoạn bị cắt cụt, 7 lần xuất hiện nhãn “đã có phản hồi, chưa xác nhận đã xử lý” và 3 cảnh báo “phản hồi tự động chưa phải hướng dẫn chính thức”. Đây là tín hiệu chất lượng report, không phải bằng chứng rằng mọi câu hỏi tương ứng đều chưa được giải quyết.
+- Chatlog có 13.494 lượt hỏi–đáp từ 1.617 học viên; riêng cohort K4 có 3.097 lượt từ 448 học viên.
+- Trong cohort K4: 839 lượt không có citation, chỉ 6 lượt dùng `ask_probing_question`, và chỉ 6 lượt có `understanding_level`.
+- Chi tiết phương pháp và 5 ví dụ nguyên văn đã ẩn danh: [notes/vlearn-mining.md](notes/vlearn-mining.md).
 
-### 3. Lát cắt giải pháp
+> Chỉ dùng data pack được cấp phép; không commit raw data hoặc thông tin định danh vào repo public.
 
-**Người dùng** TA/Mod cuối ngày **cần** một bảng triage các câu hỏi/vấn đề Discord được **AI nhóm theo chủ đề và xếp ưu tiên**, kèm message link và bằng chứng thời gian/reply, **giúp** họ **xác định việc cần xử lý trước và giảm bỏ sót câu hỏi lặp lại**.
+### 03 · Lát cắt & automation
 
-**Luồng CP1 dự kiến:** ingest message → lọc message human và câu hỏi → gom cụm câu hỏi tương tự → chấm tín hiệu ưu tiên (tuổi, số người lặp lại, thiếu phản hồi rõ ràng, lỗi thao tác) → TA/Mod duyệt/chỉnh nhãn → xuất danh sách việc cần xử lý. Không tự động DM hoặc trả lời học viên trong slice này.
+**Làm bài trước, sửa lỗi có căn cứ.**
 
-### 4. Cam kết triển khai
+> **[Học viên] cần [tự sửa bài tập vừa làm sai] được [AI chỉ ra giả định sai và đưa một gợi ý kèm trích dẫn bài giảng] giúp [học viên giải thích lại đúng vì sao mình sai].**
 
-- **Mức tự động hóa dự kiến:** bán tự động. AI đề xuất cụm, mức ưu tiên và lý do; TA/Mod là người duyệt cuối.
-- **Bằng chứng sẽ xây:** mining pack đã ẩn danh, log các message ID đại diện, quan sát Discord thật và phỏng vấn tối thiểu 20 học viên ngoài nhóm.
-- **Willing users:** cần xác nhận tối thiểu 2 học viên ngoài nhóm trước khi nộp form CP1; chưa tự điền tên khi chưa có xác nhận.
-- **Ràng buộc dữ liệu:** không commit raw data pack, tên thật, MSSV, email, số điện thoại, mention hoặc nội dung có thể định danh; chỉ giữ số liệu tổng hợp và trích dẫn ngắn đã ẩn danh.
+- **Automation:** Augment — AI chẩn đoán và gợi ý; học viên tự sửa. Không đưa ngay đáp án đầy đủ vì chẩn đoán sai có thể khiến học viên học sai.
 
-## §2 — Tác động, so sánh ý tưởng và quyết định
+### 04 · Người thử & phân công
 
-| Ý tưởng | Tín hiệu ban đầu | Tác động kỳ vọng | Quyết định |
+**Có học viên dùng thử, có người chịu trách nhiệm.**
+
+- **Willing users dự kiến:** ít nhất 2 học viên ngoài nhóm; khuyến khích ghi 3 người, sẵn sàng học thử prototype ở CP5.
+- **Phân công:** Hiếu — mining/evidence; Nguyên — UX/prototype; Vũ — prompt/evaluation; Vinh — điều phối/demo.
+
+## §2 — Impact & quyết định chọn
+
+| Ứng viên | Bằng chứng ban đầu | Tốn gì / tác động | Quyết định |
 |---|---|---|---|
-| **Discord StuckRadar (B2)** | 26 message daily standup trong 2 giờ, 13 author; 12/26 hỏi phạm vi/cách nộp | Giảm thời gian đọc thủ công, gom câu hỏi lặp và đưa vấn đề có nguy cơ bỏ sót lên đầu hàng đợi | **Chọn** |
-| ReportQA | 14 đoạn lỗi chuỗi, 1 đoạn cắt cụt trong 4 daily report; 7 nhãn chưa xác nhận xử lý | Làm report dễ đọc và đáng tin hơn, nhưng chưa trực tiếp ưu tiên vấn đề của học viên | Không chọn cho CP1 |
-| XP/attendance exception queue | 40 message human nhắc XP và 37 message nhắc điểm danh; đây là keyword count cần phân loại tiếp | Có thể giảm ticket hỏi điểm/điểm danh, nhưng phạm vi dễ phụ thuộc quyền truy cập và quy định lớp | Để phase sau |
+| **D2 VLearn FixFirst** | 448 học viên, 3.097 lượt K4; 839 lượt không citation; 6 lượt hỏi ngược | Học viên có thể nhận lời giải chung chung và lặp lại lỗi; cần một flow chẩn đoán lỗi + tự sửa | **Chọn** |
+| A1 Tutor biết-mình-không-biết | 839/3.097 lượt K4 không có citation; nhiều câu trả lời ngoài nguồn | Giảm nguy cơ học viên tin lời giải không có căn cứ, nhưng chưa tạo vòng luyện tập tự sửa | Loại cho lát cắt này |
+| D3 Học bằng cách dạy | Chỉ 6/3.097 lượt K4 có `understanding_level` | Có tiềm năng đo hiểu sâu, nhưng flow dài hơn và khó hoàn thiện trong prototype CP2 | Để phase sau |
 
-**Lý do chọn:** StuckRadar có tín hiệu lặp lại rõ nhất, bám trực tiếp job của TA/Mod và cho phép kiểm thử với human-in-the-loop mà không tự động tác động đến học viên.
+**Lý do chọn:** D2 bám đúng người dùng học viên, có flow ngắn để demo và cho phép đo kết quả học tập cụ thể: học viên sửa đúng và giải thích lại được.
 
-**Giả thuyết tác động cần xác minh ở CP2:** sau khi TA/Mod dùng triage, thời gian tìm câu hỏi cần xử lý và số câu hỏi trùng lặp bị bỏ qua sẽ giảm; cần đo trên log trước/sau và phỏng vấn người dùng.
+**Non-goals CP2:** không theo dõi điểm số cá nhân; không công khai lỗi của học viên; không xây cả khóa học; không thay thế giảng viên.
 
-**Giới hạn hiện tại:** data pack chỉ bao phủ 3 ngày; tên kênh bị ẩn danh; `reply_to` không ghi nhận mọi trao đổi tự phát; cần đối chiếu bằng quan sát Discord thật trước khi chốt ngưỡng “stuck”.
+**Kế hoạch CP2:** chọn một khái niệm trong transcript/slide, dựng flow `attempt → diagnose → hint → self-correct → explain-back` bằng dữ liệu giả; CP3 mới tích hợp AI call thật ở bước chẩn đoán.
+
+**Giới hạn:** số liệu hiện tại phản ánh hành vi tutor, chưa chứng minh chắc chắn rằng mọi học viên muốn tính năng này; cần kiểm chứng với học viên thật và đo họ có sửa/giải thích đúng hay không.

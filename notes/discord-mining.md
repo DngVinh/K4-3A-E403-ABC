@@ -1,4 +1,6 @@
-# Discord mining — CP1 evidence log
+# Archived — Discord mining — CP1 evidence log
+
+> Đây là exploratory note của phương án B2 cũ, được giữ lại để bảo toàn lịch sử commit. Không dùng làm evidence cho đề tài hiện tại. Đề tài hiện tại là Track D2 — VLearn FixFirst; xem [vlearn-mining.md](vlearn-mining.md).
 
 Ngày phân tích: 2026-09-16
 Scope: `data/discord-pack/k4_messages.csv` và `k4_daily_reports.md` của bộ dữ liệu bài hackathon. Raw pack được giữ ngoài repository; file này chỉ chứa số liệu tổng hợp và trích dẫn đã ẩn danh.
