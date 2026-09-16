@@ -2,7 +2,7 @@
 
 Nhóm: K4-3A-E403-ABC · Phòng E403<br>
 Track: D — Học tập thích ứng & tương tác trên VLearn · Slice: D2<br>
-Trạng thái: CP1 draft sau vòng mining VLearn
+Trạng thái: CP2 prototype mock đã hoàn thành; fixture minh họa, chưa tích hợp AI thật
 
 ## §1 — Canvas 4 ô
 
@@ -51,5 +51,12 @@ Trạng thái: CP1 draft sau vòng mining VLearn
 **Non-goals CP2:** không theo dõi điểm số cá nhân; không công khai lỗi của học viên; không xây cả khóa học; không thay thế giảng viên.
 
 **Kế hoạch CP2:** chọn một khái niệm trong transcript/slide, dựng flow `attempt → diagnose → hint → self-correct → explain-back` bằng dữ liệu giả; CP3 mới tích hợp AI call thật ở bước chẩn đoán.
+
+## CP2 — Prototype flow
+
+- **Prototype:** [VLearn FixFirst clickable mock](codebase/index.html)
+- **Concept fixture:** Tokenization; nội dung hiện tại là fixture minh họa để kiểm tra flow.
+- **Luồng đã dựng:** chọn concept → làm bài trước → nhập đáp án → chẩn đoán giả định sai → nhận hint + citation mẫu → tự sửa → giải thích lại → hoàn tất.
+- **Phạm vi CP2:** mock bấm được, chưa gọi AI thật; citation sẽ được thay bằng mã đoạn transcript/slide đã xác minh ở CP3.
 
 **Giới hạn:** số liệu hiện tại phản ánh hành vi tutor, chưa chứng minh chắc chắn rằng mọi học viên muốn tính năng này; cần kiểm chứng với học viên thật và đo họ có sửa/giải thích đúng hay không.

@@ -19,3 +19,4 @@
 - [Canvas và AI spec](spec.md)
 - [Nhật ký mining VLearn đã ẩn danh](notes/vlearn-mining.md)
 - [Danh sách thành viên](TEAMMATES.md)
+- [Prototype CP2 bấm được](codebase/index.html)

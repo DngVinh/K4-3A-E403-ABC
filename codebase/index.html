@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VLearn FixFirst — CP2 Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">VLearn · Track D2</p>
+          <h1>FixFirst</h1>
+        </div>
+        <span class="badge">CP2 · Mock</span>
+      </header>
+
+      <section class="progress" aria-label="Tiến trình học">
+        <div class="progress-line"><span id="progress-fill"></span></div>
+        <div class="progress-steps">
+          <span data-step="0">Làm bài</span>
+          <span data-step="1">Chẩn đoán</span>
+          <span data-step="2">Gợi ý</span>
+          <span data-step="3">Tự sửa</span>
+          <span data-step="4">Giải thích lại</span>
+        </div>
+      </section>
+
+      <section id="screen" class="screen" aria-live="polite"></section>
+
+      <footer class="footer-note">
+        <span>Prototype CP2 · Dữ liệu fixture minh họa</span>
+        <button id="reset-button" class="text-button" type="button">Làm lại</button>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
