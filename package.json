@@ -1,0 +1,11 @@
+{
+  "name": "vlearn-fixfirst",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node codebase/server.mjs",
+    "check": "node --check codebase/app.js && node --check codebase/server.mjs && node --check eval/run-golden-set.mjs && node --check eval/summarize-results.mjs",
+    "eval:run": "node eval/run-golden-set.mjs",
+    "eval:summary": "node eval/summarize-results.mjs"
+  }
+}

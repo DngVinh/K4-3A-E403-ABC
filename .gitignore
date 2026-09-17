@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+eval/citations.local.json
+node_modules/
+data/
+**/raw-data/
+**/raw-data-pack/
+**/chatlog/
+**/transcript/
+**/*raw*chatlog*
+**/*raw*transcript*

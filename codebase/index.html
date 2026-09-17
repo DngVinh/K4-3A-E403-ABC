@@ -3,37 +3,82 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VLearn FixFirst — CP2 Prototype</title>
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>FixFirst · VLearn</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">VLearn · Track D2</p>
-          <h1>FixFirst</h1>
+    <div class="app-layout">
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 7.5 16 3l8 4.5v9L16 21l-8-4.5v-9Z" fill="currentColor" opacity=".2"/><path d="M16 3v9m8-4.5-8 4.5-8-4.5M8 16.5v9l8 3.5 8-3.5v-9" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m12.3 20.5 3.7 2 3.7-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+          <div class="brand-name">vlearn<span>lab</span></div>
         </div>
-        <span class="badge">CP2 · Mock</span>
-      </header>
 
-      <section class="progress" aria-label="Tiến trình học">
-        <div class="progress-line"><span id="progress-fill"></span></div>
-        <div class="progress-steps">
-          <span data-step="0">Làm bài</span>
-          <span data-step="1">Chẩn đoán</span>
-          <span data-step="2">Gợi ý</span>
-          <span data-step="3">Tự sửa</span>
-          <span data-step="4">Giải thích lại</span>
+        <div class="workspace-switcher">
+          <div class="workspace-avatar">K4</div>
+          <div class="workspace-copy"><span>Không gian học tập</span><strong>K4 · AI Foundation</strong></div>
+          <span class="chevron" aria-hidden="true">⌄</span>
         </div>
-      </section>
 
-      <section id="screen" class="screen" aria-live="polite"></section>
+        <p class="nav-label">Không gian của bạn</p>
+        <nav class="main-nav">
+          <button class="nav-item active" type="button"><span class="nav-icon">⌂</span><span>Buổi học hiện tại</span><span class="nav-active-dot" aria-hidden="true"></span></button>
+          <button class="nav-item" type="button"><span class="nav-icon">▦</span><span>Lộ trình học</span></button>
+          <button class="nav-item" type="button"><span class="nav-icon">◷</span><span>Lịch sử bài làm</span></button>
+          <button class="nav-item" type="button"><span class="nav-icon">▱</span><span>Thư viện kiến thức</span></button>
+        </nav>
 
-      <footer class="footer-note">
-        <span>Prototype CP2 · Dữ liệu fixture minh họa</span>
-        <button id="reset-button" class="text-button" type="button">Làm lại</button>
-      </footer>
-    </main>
-    <script src="app.js"></script>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-tip"><div class="tip-icon">✦</div><div><strong>Học để hiểu sâu hơn</strong><p>FixFirst giúp bạn tìm ra giả định sai, thay vì chỉ đưa đáp án.</p></div></div>
+        <button class="sidebar-settings" type="button"><span class="nav-icon">⚙</span><span>Cài đặt</span></button>
+        <div class="profile-row"><div class="profile-avatar">VN</div><div class="profile-copy"><strong>Vinh Nguyễn</strong><span>Học viên</span></div><span class="more-icon">•••</span></div>
+      </aside>
+
+      <main class="main-content" id="main-content">
+        <header class="topbar">
+          <div class="mobile-brand"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 7.5 16 3l8 4.5v9L16 21l-8-4.5v-9Z" fill="currentColor" opacity=".2"/><path d="M16 3v9m8-4.5-8 4.5-8-4.5M8 16.5v9l8 3.5 8-3.5v-9" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m12.3 20.5 3.7 2 3.7-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><span>vlearn<span>lab</span></span></div>
+          <div class="breadcrumbs"><span>AI &amp; LLM Foundation</span><span class="breadcrumb-separator">/</span><strong>FixFirst</strong></div>
+          <div class="topbar-actions"><span class="cp3-badge">CP3 · AI thật</span><span class="live-status"><span class="live-dot"></span> Hệ thống hoạt động</span><button class="icon-button" type="button" aria-label="Trợ giúp">?</button><div class="topbar-divider"></div><div class="topbar-user"><div class="profile-avatar small">VN</div><span>Vinh Nguyễn</span><span class="chevron">⌄</span></div></div>
+        </header>
+
+        <div class="content-wrap">
+          <div class="page-heading">
+            <div><p class="overline"><span class="overline-mark"></span>AI &amp; LLM FOUNDATION <span>·</span> MODULE 01</p><h1>FixFirst <span>Học từ điều bạn chưa hiểu</span></h1></div>
+            <div class="heading-meta"><span class="verified-icon">✓</span><div><strong>Phiên học được bảo vệ</strong><small>Citation đã xác minh</small></div></div>
+          </div>
+
+          <section class="lesson-overview" aria-label="Thông tin bài học">
+            <div class="lesson-symbol"><span id="lesson-symbol-label">AI</span><i>✦</i></div><div class="lesson-info"><div class="lesson-eyebrow" id="lesson-eyebrow">BÀI HỌC ĐANG CHỌN</div><h2 id="lesson-name">Tokenization</h2><p id="lesson-description">Hiểu cách văn bản được chia thành các token trước khi đi vào mô hình.</p></div><div class="overview-divider"></div><div class="overview-stat"><span>Thời lượng</span><strong><span class="stat-icon">◷</span> <span id="lesson-duration">03 phút</span></strong></div><div class="overview-stat"><span>Độ khó</span><strong><span class="difficulty-dots"><i></i><i></i><i></i></span> <span id="lesson-difficulty">Cơ bản</span></strong></div><button id="reset-button" class="reset-button" type="button" aria-label="Làm lại bài học">↻ <span>Làm lại</span></button>
+          </section>
+
+          <section class="progress-card" aria-label="Tiến trình học">
+            <div class="progress-card-header"><div><span class="section-label">TIẾN TRÌNH PHIÊN HỌC</span><strong id="progress-title">Bắt đầu để khám phá</strong></div><span id="progress-count" class="progress-count">0 / 4 bước</span></div><div class="progress-track"><span id="progress-fill"></span></div>
+            <div class="progress-steps"><span data-step="0"><i>1</i><b>Thử trả lời</b></span><span data-step="1"><i>2</i><b>Chẩn đoán</b></span><span data-step="2"><i>3</i><b>Gợi ý</b></span><span data-step="3"><i>4</i><b>Tự sửa</b></span><span data-step="4"><i>5</i><b>Giải thích lại</b></span></div>
+          </section>
+
+          <div class="workspace-grid">
+            <section id="screen" class="screen" aria-live="polite"></section>
+
+            <aside class="insight-panel" aria-label="Tóm tắt phiên học">
+              <div class="insight-card loop-card"><div class="insight-card-heading"><div><span class="section-label">PHƯƠNG PHÁP CỦA FIXFIRST</span><h2>Vòng lặp học sâu</h2></div><span class="spark-badge">✦</span></div>
+                <div class="learning-loop"><div class="rail-step active" data-rail-step="0"><span class="rail-number">01</span><div><strong>Thử trước</strong><p>Bắt đầu bằng hiểu biết hiện tại của bạn.</p></div></div><div class="rail-step" data-rail-step="1"><span class="rail-number">02</span><div><strong>Tìm điểm sai</strong><p>AI chỉ ra giả định cần kiểm tra.</p></div></div><div class="rail-step" data-rail-step="2"><span class="rail-number">03</span><div><strong>Nhận gợi ý</strong><p>Một hint vừa đủ để bạn tự đi tiếp.</p></div></div><div class="rail-step" data-rail-step="3"><span class="rail-number">04</span><div><strong>Tự sửa &amp; nói lại</strong><p>Biến kiến thức mới thành của bạn.</p></div></div></div>
+              </div>
+              <div class="insight-card trust-card"><div class="trust-icon">✓</div><div><strong>AI có căn cứ</strong><p>Chỉ hiển thị chẩn đoán khi nguồn tham chiếu đã được xác minh.</p><span class="trust-link">Tìm hiểu về citation <span>↗</span></span></div></div>
+              <div class="insight-card mini-note"><span class="mini-note-icon">⌁</span><div><strong>Mẹo nhỏ</strong><p>Viết ra điều bạn thật sự nghĩ, kể cả khi chưa chắc chắn.</p></div></div>
+            </aside>
+          </div>
+
+          <footer class="footer-note"><span>VLearn Lab · Trace không lưu câu trả lời thô</span><span><span class="footer-dot"></span> Phiên học riêng tư</span></footer>
+        </div>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+    <aside id="citation-drawer" class="citation-drawer" aria-label="Chi tiết citation" aria-hidden="true">
+      <div class="drawer-header"><div><span class="section-label">SOURCE CHECK</span><h2>Căn cứ đã xác minh</h2></div><button id="citation-close" class="drawer-close" type="button" aria-label="Đóng">×</button></div>
+      <div id="citation-body" class="drawer-body"></div>
+    </aside>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

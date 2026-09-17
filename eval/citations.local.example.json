@@ -1,0 +1,26 @@
+{
+  "description": "Copy file này thành citations.local.json. Chỉ lưu mã nguồn và mệnh đề đã chuẩn hoá; không dán transcript/chatlog thô.",
+  "sources": [
+    {
+      "id": "T04-049",
+      "label": "Day 1 AI & LLM Foundation — Token",
+      "location": "transcript-04-clean.md · [T04-049]",
+      "status": "verified",
+      "evidence": "Token là đơn vị tính của LLM, không đồng nhất với một từ hay một ký tự; văn bản được chia thành token và sự chia này có thể khác theo ngôn ngữ."
+    },
+    {
+      "id": "T04-050",
+      "label": "Day 1 AI & LLM Foundation — Công cụ đếm token",
+      "location": "transcript-04-clean.md · [T04-050]",
+      "status": "verified",
+      "evidence": "Muốn biết số token chính xác cần dùng công cụ đếm; cách chia token có thể khác giữa các phiên bản mô hình."
+    },
+    {
+      "id": "T06-135-136",
+      "label": "Day 1 AI & LLM Foundation — Next-token prediction",
+      "location": "transcript-06-clean.md · [T06-135]–[T06-136]",
+      "status": "verified",
+      "evidence": "LLM không đọc theo từng ký tự hay từng từ; nó xử lý token và dự đoán token tiếp theo theo xác suất."
+    }
+  ]
+}

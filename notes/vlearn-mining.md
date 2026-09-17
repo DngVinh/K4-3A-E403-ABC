@@ -25,15 +25,14 @@ Scope: `data/vlearn-pack/chatlog/tutor_turns.csv` của bộ dữ liệu bài ha
 
 Tín hiệu này không chứng minh tutor luôn trả lời sai. Nó cho thấy flow hiện tại ít ghi nhận mức hiểu và ít dùng hỏi ngược/gợi ý, tạo cơ sở để thử một flow mới bắt đầu bằng bài làm và kết thúc bằng tự sửa.
 
-## Ví dụ nguyên văn đại diện
+## Pattern ẩn danh đại diện
 
-Các câu hỏi dưới đây thuộc cohort K4, không phải câu mẫu preset, và đã được nền tảng mask tên/định danh:
+Các pattern đã được paraphrase, không giữ nguyên câu chữ hay mã dòng của nguồn:
 
-1. `T10317` — “giải thích lại dc không hơi khó hiểu”
-2. `T10326` — “Giải thích lại giúp mình phần mà mình hay thấy khó.”
-3. `T10369` — “tóm tắt lại video”
-4. `T10421` — “cần nói rõ hơn về sự khác biệt để tôi dễ phân biệt”
-5. `T10429` — “LLM có đặc điểm là gì?”
+- Học viên yêu cầu giải thích lại vì phần học khó hiểu.
+- Học viên muốn được diễn giải ngắn gọn hoặc tóm tắt lại nội dung.
+- Học viên muốn phân biệt rõ sự khác nhau giữa các khái niệm.
+- Học viên đặt câu hỏi rộng về đặc điểm của mô hình ngôn ngữ.
 
 Các ví dụ trên cho thấy người học có nhu cầu làm rõ/diễn giải lại, nhưng log hiện tại thường ghi nhận lượt `review_concept` thay vì một chuỗi chẩn đoán lỗi → gợi ý → người học tự sửa. Vì vậy D2 sẽ kiểm tra trực tiếp khả năng tự sửa và giải thích lại, không chỉ đo độ dài/đúng của câu trả lời AI.
 

@@ -1,17 +1,22 @@
 # Thành viên nhóm
 
-| Họ và tên | MSSV | Vai trò CP1/CP2 | Phần việc chính |
+| Họ và tên | MSSV | Vai trò chính | Phần việc chính |
 |---|---|---|---|
-| Lê Minh Hiếu | 2A202602848 | Mining / evidence | Khai thác chatlog, chọn case và trích dẫn |
-| Nguyễn Hoàng Lê Nguyên | 2A202602472 | UX / prototype | Thiết kế flow học thử và giao diện feedback |
-| Giang Thế Vũ | 2A202602478 | Prompt / evaluation | Xây prompt chẩn đoán lỗi, golden set và đo lường |
-| Dương Xuân Vinh | 2A202602622 | Đội trưởng / product owner | Điều phối, tích hợp, kiểm định và demo |
+| Dương Xuân Vinh | 2A202602622 | Đội trưởng / product owner | Điều phối, chốt `spec.md`, tích hợp, kiểm định, demo và nộp checkpoint |
+| Lê Minh Hiếu | 2A202602848 | Mining / evidence | Khai thác chatlog, chọn pattern ẩn danh, quản lý citation và evidence |
+| Nguyễn Hoàng Lê Nguyên | 2A202602472 | UX / prototype | Thiết kế flow học thử, giao diện feedback và hỗ trợ user test CP5 |
+| Giang Thế Vũ | 2A202602478 | Prompt / evaluation | Xây prompt, safety router, golden set, báo cáo đo và reviewer checklist |
+
 
 ## Phân công theo checkpoint
 
 - **CP1 — Canvas và evidence:** Hiếu phụ trách mining/evidence; Vinh tổng hợp và chốt nội dung.
 - **CP2 — Prototype và flow:** Nguyên phụ trách UX/prototype; Vũ phụ trách prompt/evaluation; Vinh tích hợp, kiểm định và demo.
-- **CP3 trở đi:** Vũ phụ trách prompt/evaluation; cả nhóm phối hợp kiểm thử và ghi nhận kết quả.
+- **CP3 — AI thật và số đo:** Vũ phụ trách prompt/evaluation; Hiếu rà soát citation/evidence; Nguyên kiểm tra flow; Vinh tích hợp, kiểm định và demo.
+- **CP4 — Chốt spec:** Vũ phụ trách golden set và quality bar; Hiếu rà soát pattern mining/evidence; Nguyên rà soát trải nghiệm và phần còn thiếu; Vinh chốt `spec.md`, báo cáo kết quả và nộp form.
+- **CP5 — Validation và demo:** Nguyên điều phối user test; Vũ tổng hợp số đo; Hiếu kiểm tra bằng chứng/citation; Vinh hoàn thiện slide, video dự phòng và phần trình bày.
+
+> Reviewer thủ công CP4 chưa được gán tên trong file này; chỉ điền sau khi hai người xác nhận trực tiếp việc chấm.
 
 ## Thông tin liên hệ đội trưởng
 
