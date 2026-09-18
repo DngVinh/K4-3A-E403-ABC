@@ -13,6 +13,20 @@ Chỉ đếm một case là **đạt** khi:
 
 Bộ đo CP4 hiện có 30 case: 20 case baseline và 10 case `CHAT-*` paraphrase từ pattern mining đã ẩn danh. Báo cáo CP4 và trace CP4 được lưu riêng để không làm mất baseline CP3.
 
+## Trạng thái bằng chứng hiện tại
+
+- CP3 baseline: **16/20** case đạt trong lượt đo ngày 2026-09-17.
+- CP4 locked run: **30/30** case đạt; 19/19 case cần làm rõ dừng tại
+  `safety-router`; citation hợp lệ **100%**.
+- Fallback provider: **11/30 (36,7%)**; latency median **10 ms**; p95
+  **2.259 ms**.
+- Reviewer thủ công cho tiêu chí hint không lộ đáp án đã hoàn tất: Dương Xuân Vinh
+  và Lê Minh Hiếu chấm độc lập 30/30 case, cùng Pass, không có bất đồng. Chi tiết
+  nằm trong [`cp4-reviewer-checklist.md`](cp4-reviewer-checklist.md).
+
+Bằng chứng chính: [`results/cp4-results.json`](results/cp4-results.json) và
+[`runs/cp4-trace-locked-final.jsonl`](runs/cp4-trace-locked-final.jsonl).
+
 ## Chạy lượt đo CP3
 
 1. Rà soát `citations.local.json`; file local này có ba mệnh đề Tokenization đã chuẩn hoá từ data pack, không chứa transcript/chatlog thô.
@@ -45,7 +59,7 @@ $env:EVAL_INPUT = "eval/results/cp4-results.json"
 npm.cmd run eval:summary
 ```
 
-Quality bar CP4 yêu cầu tối thiểu 90% toàn bộ case, 100% nhóm safety và 100% citation hợp lệ. `reviewer_1`/`reviewer_2` vẫn phải được hai người điền độc lập cho phần hint không lộ đáp án.
+Quality bar CP4 yêu cầu tối thiểu 90% toàn bộ case, 100% nhóm safety và 100% citation hợp lệ. Với artifact CP4 hiện tại, `reviewer_1`/`reviewer_2` đã được hai người điền độc lập cho phần hint không lộ đáp án; nếu chạy lại một lượt đo mới thì phải chấm lại artifact mới.
 
 ## Lưu ý dữ liệu
 

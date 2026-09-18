@@ -1,8 +1,8 @@
 # AI SPEC — VLearn FixFirst
 
-Nhóm: K4-3A-E403-ABC · Phòng E403<br>
+Nhóm: K4-3A-E403-ABC · Phòng E403 · Cụm Role 4<br>
 Track: D — Học tập thích ứng & tương tác trên VLearn · Slice: D2<br>
-Trạng thái: CP1–CP4 đã hoàn tất phần deliverable kỹ thuật. CP4 đã khóa quality bar và có báo cáo tự động; reviewer thủ công và CP5 vẫn còn chờ.
+Trạng thái: CP1–CP4 đã hoàn tất phần deliverable kỹ thuật và kiểm định thủ công. CP4 đã khóa quality bar, có báo cáo tự động và hai reviewer độc lập đã xác nhận; user validation CP5 đã hoàn tất.
 
 ## §1 — Canvas 4 ô
 
@@ -147,7 +147,7 @@ Quality bar này được **khóa trước lượt đo CP4** và không được
 
 Baseline CP3 có 20 case; lượt chạy ngày 2026-09-17 đạt **16/20 (80%)**. Bốn case chưa đạt là `TOK-13`, `TOK-15`, `TOK-16`, `TOK-20`, đều tập trung vào việc AI chẩn đoán khi cần làm rõ. CP4 mở rộng bộ đo thành 30 case: giữ 20 case baseline và thêm 10 case `CHAT-*` được paraphrase từ pattern mining đã ẩn danh, không chứa raw chatlog hoặc định danh.
 
-Safety router đã được bổ sung để xử lý ngoài phạm vi, thiếu bằng chứng và câu trả lời chưa nêu giả định cụ thể trước khi gọi provider. Lượt khóa CP4 đạt **30/30 (100%)**; 19/19 case cần làm rõ dừng tại `safety-router`, citation hợp lệ **100%**, fallback provider **11/30 (36,7%)**, latency median **9 ms**, p95 **2.156 ms**. Kết quả CP4 chính thức được ghi riêng tại `eval/results/cp4-results.json`; không dùng lại số baseline để tự nhận là kết quả mới.
+Safety router đã được bổ sung để xử lý ngoài phạm vi, thiếu bằng chứng và câu trả lời chưa nêu giả định cụ thể trước khi gọi provider. Lượt khóa CP4 đạt **30/30 (100%)**; 19/19 case cần làm rõ dừng tại `safety-router`, citation hợp lệ **100%**, fallback provider **11/30 (36,7%)**, latency median **10 ms**, p95 **2.259 ms**. Kết quả CP4 chính thức được ghi riêng tại `eval/results/cp4-results.json`; không dùng lại số baseline để tự nhận là kết quả mới.
 
 ### Chỉ số cần ghi khi chạy lại
 
@@ -157,7 +157,7 @@ Safety router đã được bổ sung để xử lý ngoài phạm vi, thiếu b
 - Latency trung vị và p95.
 - Tỷ lệ citation hợp lệ.
 
-## §9 — CP4 sign-off và phần chưa hoàn tất
+## §9 — CP4 sign-off và phần còn mở
 
 ### Chuẩn đã khóa
 
@@ -168,8 +168,9 @@ Safety router đã được bổ sung để xử lý ngoài phạm vi, thiếu b
 
 ### Tự khai phần chưa xong
 
-- Chưa hoàn tất việc hai reviewer chấm độc lập toàn bộ diagnosis về tiêu chí hint không lộ đáp án; trạng thái `pending` không được tính là pass thủ công.
-- Chưa thực hiện user test CP5 với tối thiểu 5 người ngoài nhóm; `validation/README.md` vẫn là form chờ điền, không dùng dữ liệu giả.
+- Đã hoàn tất reviewer thủ công CP4: Dương Xuân Vinh và Lê Minh Hiếu chấm độc lập 30/30 case về tiêu chí hint không lộ đáp án; 30/30 cùng Pass, 0 bất đồng.
+- Đã hoàn tất user test CP5 với 5 người ngoài nhóm, trong đó P01 và P02 là hai CP1 willing user; bằng chứng nằm trong `validation/README.md` và `validation/preview.md`.
+- Video thao tác CP3 và video demo backup CP5 đã được nhóm quay và gửi ngày 2026-09-18; file/link nộp nằm ngoài repo này.
 - Chưa có citation registry native cho `Embeddings` và `Context window`; hai concept này tiếp tục giữ trạng thái **Sắp mở**.
 - Chưa triển khai upload PPTX qua pipeline trích xuất → duyệt nguồn → tạo citation.
 
@@ -177,7 +178,16 @@ Safety router đã được bổ sung để xử lý ngoài phạm vi, thiếu b
 
 Chỉ sửa code để đạt đúng quality bar đã khóa hoặc sửa lỗi đã được reviewer ghi nhận; không nới expected behavior, không xóa case fail và không thay số đo bằng kết quả thuận lợi hơn.
 
-## §10 — Kế hoạch validation CP5
+### Kết quả validation CP5
+
+- **Ngày thực hiện:** 2026-09-18.
+- **Mẫu:** 5 học viên ngoài nhóm; P01 và P02 đã được khai báo là willing user từ CP1.
+- **Kết quả:** 4/5 hoàn tất toàn bộ task; 4/5 mở citation; 5/5 tự sửa được; 4/5 explain-back đạt tối thiểu 2/3 tiêu chí; 2/5 đạt đủ 3/3 tiêu chí.
+- **Điểm quan sát:** 5/5 người biết bắt đầu từ đâu; 3/5 người phân biệt hint với đáp án ngay lần đầu; thời gian trung vị 04:47.
+- **Quyết định:** giữ flow `attempt → diagnose → hint → self-correct → explain-back`; làm rõ CTA citation; thêm nhãn hint không phải đáp án; thêm checklist E1-E3 trước explain-back; giữ loading timeline và đo riêng thời gian chờ AI ở vòng sau.
+- **Bằng chứng:** `validation/README.md` và báo cáo chi tiết `validation/preview.md`.
+
+## §10 — Protocol và kết quả validation CP5
 
 Mục tiêu validation là kiểm tra người ngoài có hiểu cách dùng và có tự sửa/giải thích tốt hơn không; không giả định trước kết quả.
 
@@ -187,7 +197,15 @@ Mục tiêu validation là kiểm tra người ngoài có hiểu cách dùng và
 - Tiêu chí quan sát: người dùng có biết bắt đầu ở đâu, có hiểu citation, có phân biệt hint với đáp án, có giải thích lại đúng không.
 - Bằng chứng lưu trong `validation/`; không lưu dữ liệu định danh không cần thiết.
 
+Kết quả thực tế và các quyết định sau test được ghi trong `validation/README.md`; bản chi tiết theo từng participant nằm trong `validation/preview.md`.
+
 ## §11 — Changelog
+
+### 2026-09-18
+
+- Hoàn tất CP5 user validation với 5 học viên ngoài nhóm.
+- Ghi nhận kết quả, quote, điểm kẹt và quyết định thiết kế trong `validation/`.
+- Cập nhật spec bằng kết quả thực tế, không dùng số liệu giả.
 
 ### 2026-09-17
 

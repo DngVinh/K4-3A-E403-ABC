@@ -4,14 +4,14 @@
 
 ## 👥 Thành viên nhóm & Phân công vai trò
 
-**Lớp:** 3A · **Phòng:** ____ · **Cụm:** ____ · **Track:** ____
+**Tên nhóm:** VLearn FixFirst  ·  **Lớp:** 3A · **Phòng:** E403 · **Cụm:** Role 4 · **Track:** D - Học tập thích ứng & tương tác
 
 | Họ và Tên | Mã Học Viên | Vai trò chính | Phần việc đảm nhiệm trong dự án |
 |---|---|---|---|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Dương Xuân Vinh | 2A202602622 | Đội trưởng / product owner | Điều phối, chốt `spec.md`, tích hợp, kiểm định, demo và nộp checkpoint |
+| Lê Minh Hiếu | 2A202602848 | Mining / evidence | Khai thác pattern ẩn danh, quản lý citation và evidence |
+| Nguyễn Hoàng Lê Nguyên | 2A202602472 | UX / prototype | Thiết kế flow học thử, giao diện feedback và điều phối user test CP5 |
+| Giang Thế Vũ | 2A202602478 | Prompt / evaluation | Xây prompt, safety router, golden set, báo cáo đo và reviewer checklist |
 
 > Nhóm copy nguyên file README này về repo của mình, rồi điền bảng trên. Cột **Phần việc đảm nhiệm** ghi càng cụ thể càng tốt.
 
@@ -266,8 +266,13 @@ repo/
 ├── codebase/          ← prototype (ghi rõ phần nào mock)
 ├── eval/              ← golden set + bảng kết quả các lượt chạy
 ├── validation/        ← nhật ký cho người ngoài dùng thử (R6 — không làm thì trần điểm 92)
+├── demo/              ← hướng dẫn video CP3/CP5 và notes thuyết trình CP6
+├── docs/              ← bảng đối chiếu CP1-CP6 và checklist bàn giao
 └── reflection/        ← mỗi người 1 file
 ```
+
+Trạng thái artifact và các phần còn chờ xác nhận được tổng hợp tại
+[`docs/cp1-cp6-status.md`](docs/cp1-cp6-status.md).
 
 ### README.md của nhóm
 

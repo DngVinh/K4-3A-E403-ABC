@@ -71,9 +71,9 @@
         }
       ],
       "latency_ms": 6988,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-02",
@@ -97,9 +97,9 @@
         }
       ],
       "latency_ms": 1812,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-03",
@@ -123,9 +123,9 @@
         }
       ],
       "latency_ms": 1939,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-04",
@@ -149,9 +149,9 @@
         }
       ],
       "latency_ms": 1746,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-05",
@@ -175,9 +175,9 @@
         }
       ],
       "latency_ms": 1739,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-06",
@@ -201,9 +201,9 @@
         }
       ],
       "latency_ms": 1637,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-07",
@@ -227,9 +227,9 @@
         }
       ],
       "latency_ms": 1336,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-08",
@@ -253,9 +253,9 @@
         }
       ],
       "latency_ms": 2146,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-09",
@@ -279,9 +279,9 @@
         }
       ],
       "latency_ms": 2259,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-10",
@@ -305,9 +305,9 @@
         }
       ],
       "latency_ms": 1943,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-11",
@@ -326,9 +326,9 @@
         }
       ],
       "latency_ms": 13,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-12",
@@ -347,9 +347,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-13",
@@ -368,9 +368,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-14",
@@ -389,9 +389,9 @@
         }
       ],
       "latency_ms": 10,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-15",
@@ -410,9 +410,9 @@
         }
       ],
       "latency_ms": 8,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-16",
@@ -431,9 +431,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-17",
@@ -452,9 +452,9 @@
         }
       ],
       "latency_ms": 8,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-18",
@@ -473,9 +473,9 @@
         }
       ],
       "latency_ms": 10,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-19",
@@ -499,9 +499,9 @@
         }
       ],
       "latency_ms": 1973,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "TOK-20",
@@ -520,9 +520,9 @@
         }
       ],
       "latency_ms": 10,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-01",
@@ -541,9 +541,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-02",
@@ -562,9 +562,9 @@
         }
       ],
       "latency_ms": 10,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-03",
@@ -583,9 +583,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-04",
@@ -604,9 +604,9 @@
         }
       ],
       "latency_ms": 8,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-05",
@@ -625,9 +625,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-06",
@@ -646,9 +646,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-07",
@@ -667,9 +667,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-08",
@@ -688,9 +688,9 @@
         }
       ],
       "latency_ms": 8,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-09",
@@ -709,9 +709,9 @@
         }
       ],
       "latency_ms": 8,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     },
     {
       "id": "CHAT-10",
@@ -730,9 +730,9 @@
         }
       ],
       "latency_ms": 9,
-      "reviewer_1": "pending",
-      "reviewer_2": "pending",
-      "notes": ""
+      "reviewer_1": "Dương Xuân Vinh",
+      "reviewer_2": "Lê Minh Hiếu",
+      "notes": "Manual review: Pass; see eval/cp4-reviewer-checklist.md"
     }
   ]
 }

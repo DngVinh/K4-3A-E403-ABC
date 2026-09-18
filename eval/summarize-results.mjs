@@ -10,4 +10,9 @@ console.log(`Kết quả tự động: ${report.metric.passed}/${report.metric.t
 console.log(`Case fail: ${failures.map((record) => record.id).join(", ") || "không có"}.`);
 if (report.metric.latency_ms) console.log(`Latency median/p95: ${report.metric.latency_ms.median}/${report.metric.latency_ms.p95} ms.`);
 if (report.metric.fallback_percent !== undefined) console.log(`Fallback provider: ${report.metric.fallback_cases}/${report.metric.total} case (${report.metric.fallback_percent}%).`);
-console.log("Còn cần hai người chấm độc lập các case khó ở reviewer_1 và reviewer_2 trước khi chốt số đo.");
+const pendingReviews = report.records.filter((record) => record.reviewer_1 === "pending" || record.reviewer_2 === "pending");
+if (pendingReviews.length === 0) {
+  console.log("Reviewer thủ công: đã hoàn tất cho toàn bộ case trong artifact.");
+} else {
+  console.log(`Reviewer thủ công: còn ${pendingReviews.length} case chưa được hai reviewer xác nhận độc lập.`);
+}
